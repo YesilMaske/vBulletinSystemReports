@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vBulletin System Message - Control Panel</title>
+    <style>
+        body {
+            background-color: #E1E1E2;
+            font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
+            font-size: 11px;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        .page-wrapper {
+            background-color: #FFFFFF;
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #0B198C;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #0B198C;
+            color: #FFFFFF;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .tborder {
+            background-color: #FFFFFF;
+            color: #000000;
+            border: 1px solid #0B198C;
+            margin: 15px;
+        }
+        .tcat {
+            background-color: #869BBF;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 6px;
+            border-bottom: 1px solid #0B198C;
+        }
+        .thead {
+            background-color: #5C7099;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding: 4px;
+        }
+        .alt1 {
+            background-color: #F5F5FF;
+            padding: 6px;
+            border-bottom: 1px solid #D1D1E1;
+        }
+        .alt2 {
+            background-color: #E1E4F2;
+            padding: 6px;
+            border-bottom: 1px solid #D1D1E1;
+            font-weight: bold;
+            width: 30%;
+        }
+        .checkbox-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .checkbox-list li {
+            margin-bottom: 3px;
+        }
+        .checkbox-list input {
+            vertical-align: middle;
+        }
+        .banned-text {
+            color: #FF0000;
+            font-weight: bold;
+        }
+        .admin-note-box {
+            border: 1px solid #CCCCCC;
+            background-color: #FFFFCC;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+        .log-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .log-table td {
+            padding: 4px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        .time-col {
+            width: 120px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="header">vBulletin Admin Control Panel - User Incident & Ban Report</div>
+    
+    <div class="tborder">
+        <div class="tcat">Profile Overview: anonymous-58</div>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td class="alt2">Username:</td>
+                <td class="alt1"><strong>anonymous-58</strong> (ID: 94012)</td>
+            </tr>
+            <tr>
+                <td class="alt2">Registration Date:</td>
+                <td class="alt1">XX/XX/2011</td>
+            </tr>
+            <tr>
+                <td class="alt2">IP Address:</td>
+                <td class="alt1">127.0.0.1 (Anomaly: Localhost loopback detected)</td>
+            </tr>
+            <tr>
+                <td class="alt2">Current Status:</td>
+                <td class="alt1"><span class="banned-text">BANNED (Permanent)</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tborder">
+        <div class="tcat">Activity & Access Log</div>
+        <div class="alt1">
+            <table class="log-table">
+                <tr>
+                    <td class="time-col">XX/XX/2011 - 02:14 AM</td>
+                    <td>Account registered. Email verification bypassed via unknown SQL injection.</td>
+                </tr>
+                <tr>
+                    <td class="time-col">XX/XX/2011 - 02:18 AM</td>
+                    <td>Created thread in 'Retro Games & Mods'.</td>
+                </tr>
+                <tr>
+                    <td class="time-col">XX/XX/2011 - 02:19 AM</td>
+                    <td>Uploaded attachment: <strong> <a href= "https://gamejolt.com/games/sonicslaughterhouse/1082230"> Sonic_Schoolhouse_Enhanced.zip</a> </strong> <em>Note: Bypassed 5MB attachment limit.</em></td>
+                </tr>
+                <tr>
+                    <td class="time-col">XX/XX/2011 - 03:42 AM</td>
+                    <td>Account suspended by Admin_Steve. Thread moved to Quarantine.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="tborder">
+        <div class="tcat">Ban Reason (Select all that apply)</div>
+        <div class="alt1">
+            <ul class="checkbox-list">
+                <li><input type="checkbox" disabled> Spam / Unauthorized Advertising</li>
+                <li><input type="checkbox" checked disabled> <strong>Distribution of Malware / Malicious Executables</strong></li>
+                <li><input type="checkbox" checked disabled> <strong>Extreme Violence / Disturbing Content (Gore)</strong></li>
+                <li><input type="checkbox" disabled> Harassment / Threatening Behavior</li>
+                <li><input type="checkbox" checked disabled> <strong>Exploiting Forum Software / Hacking</strong></li>
+            </ul>
+
+<div class="admin-note-box">
+                <strong>Admin_Steve's Custom Notes:</strong><br><br>
+                Permaban issued. Do NOT attempt to download the attachment from the quarantine folder. <br><br>
+                Several users reported that opening the zip file causes an immediate system memory leak. The executable inside doesn't trip standard antivirus definitions, but it forcefully writes corrupted visual data into the monitor's driver cache. The "game" contains heavily distorted audio and graphic depictions of violence that violate our Terms of Service.<br><br>
+                More concerningly: I tried to delete the thread completely from the database, but it returned an SQL lock error. The file is actively modifying its own permissions on our server. I am taking the server offline for a hard wipe. If anyone sees this user re-register, IP ban the subnet immediately.
+                
+                <hr style="border: 0; border-top: 1px dashed #CC9900; margin: 15px 0;">
+
+                <strong>[UPDATE - 05:12 AM]</strong><br>
+                About 1-2 hours after issuing the ban, the users who initially reported this thread started spamming my inbox with erratic, incoherent PMs. Earlier tonight, I asked a couple of junior moderators to run the file in a controlled environment to verify the reports, but I haven't been able to reach either of them since. No response on Skype, no activity on the board. This is unsettling. Something is deeply wrong with that file. I will update this log if anything changes.
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
